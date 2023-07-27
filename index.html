@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Train+One&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(#000000, #888888);
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: azure;
+        font-family: 'Kaisei HarunoUmi', serif;
+    }
+    .welcome-section {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUp 1s forwards;
+    }
+
+    .welcome-section h1, .welcome-section p, .welcome-section .cta-button {
+      animation: slideUp 1s forwards;
+    }
+
+    .welcome-section h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      opacity: 0; /* 最初は不透明度を0にする */
+      transform: translateY(50px); /* 下に50px移動させる */
+      animation: slideUp 1s forwards; /* アニメーションの設定 */
+    }
+
+    .welcome-section p {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 40px;
+      font-family: 'Kaisei HarunoUmi', serif;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cta-button {
+      margin: 0 10px;
+      padding: 12px 24px;
+      font-size: 20px;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Kaisei HarunoUmi', serif;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #9e9e9e;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .follower {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #2b2b2b; /* 黒に変更 */
+      pointer-events: none;
+    }
+
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <div class="welcome-section">
+    <h1>Welcome to Our Website.</h1>
+    <p>i2224072 Ryoka Yasuda</p>
+    <div class="buttons-container">
+        <a href="ilustration.html" class="cta-button">Illustration</a>
+        <a href="photo.html" class="cta-button">Photo</a>
+        <a href="design.html" class="cta-button">Design</a>
+    </div>
+  </div>
+  <div class="follower"></div>
+
+  <script>
+    // マウスに追従する円の要素を取得
+    const follower = document.querySelector('.follower');
+
+    // マウス座標を更新する関数
+    function updateMousePosition(event) {
+      // マウスのX座標を取得
+      const mouseX = event.clientX;
+      // マウスのY座標を取得
+      const mouseY = event.clientY;
+
+      // マウス座標を円の中心に設定
+      follower.style.left = mouseX - (follower.offsetWidth / 2) + 'px';
+      follower.style.top = mouseY - (follower.offsetHeight / 2) + 'px';
+            // 一部の遅延を追加して円の座標を更新
+            setTimeout(() => {
+        follower.style.left = mouseX - (follower.offsetWidth / 2) + 'px';
+        follower.style.top = mouseY - (follower.offsetHeight / 2) + 'px';
+      }, 50); // 50ミリ秒の遅延（調整可能）
+    }
+
+
+
+    // マウス座標の更新を監視
+    document.addEventListener('mousemove', updateMousePosition);
+  </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Train+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Kaisei+HarunoUmi&family=Train+One&display=swap');
+
+@media screen and(max-width: 480px) {
+    img {
+    border: 0;
+    }
+    }
+@media screen and(min-width: 1280px) {
+    img {
+    border: 1px solid red;
+    }
+}
+
+
+
+ h2 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kaisei HarunoUmi', serif;
+  }
+  
+  body {
+    background: linear-gradient(#000000, #888888);
+  }
+
+  p {
+    font-family: kaisotai, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  h3 {
+    font-family: kaisotai, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 100px;
+    color: #ffffff;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-title{
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+
+  .content{
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content .image{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .content .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .content .text-box {
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    transform: translate(-80px, 50px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border-radius: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .content .text-box h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 80px;
+  }
+
+  .info-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    width: 700px;
+    margin-left: 50px;
+  }
+  
+  
